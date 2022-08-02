@@ -1,9 +1,9 @@
 const TwitchBot = require('twitch-bot')
  
 const Bot = new TwitchBot({
-  username: 'Kappa_Bot',
+  username: 'TADbot',
   oauth: 'oauth:dwiaj91j1KKona9j9d1420',
-  channels: ['twitch']
+  channels: ['niceygylive']
 })
  
 Bot.on('join', channel => {
