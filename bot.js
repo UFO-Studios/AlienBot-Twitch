@@ -41,9 +41,11 @@ client.on("message", (channel, { username }, message, self) => {
 
   if (byes.includes(message)) return client.say(channel, `Bye @${username}!`);
 
-  commands.map((obj) => {
-    if (obj.name == message) {
-      obj.execute(channel, username, message, client);
-    }
-  });
+  if (message.startsWith("!")) {
+    commands.map((obj) => {
+      if (obj.name == message.split("!")[1]) {
+        obj.execute(channel, username, message, client);
+      }
+    });
+  }
 });

@@ -1,5 +1,5 @@
 module.exports = {
-  name: "!ping",
+  name: "ping",
   async execute(channel, username, message, client) {
     client.say(channel, "pong!");
   },
